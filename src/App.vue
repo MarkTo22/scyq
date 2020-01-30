@@ -2,8 +2,8 @@
   <div>
     <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
     <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
-    <MobilePage msg="Welcome to Your Vue.js App"/>
-    <PCPage msg="Welcome to Your Vue.js App"/>
+    <MobilePage v-if="!isPc" />
+    <PCPage v-if="isPc" />
   </div>
 </template>
 
@@ -19,7 +19,14 @@ export default {
     MobilePage,
     PCPage
   },
+  data(){
+    let isMoblie = /Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)
+    return {
+      isPc: !isMoblie
+    }
+  },
   created(){
+
   }
 }
 </script>
