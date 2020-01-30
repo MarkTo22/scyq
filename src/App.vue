@@ -1,17 +1,25 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
+    <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
+    <MobilePage msg="Welcome to Your Vue.js App"/>
+    <PCPage msg="Welcome to Your Vue.js App"/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+// import HelloWorld from './components/HelloWorld.vue'
+import MobilePage from './components/mobile/MobilePage';
+import PCPage from './components/pc/PCPage';
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    // HelloWorld
+    MobilePage,
+    PCPage
+  },
+  created(){
   }
 }
 </script>
